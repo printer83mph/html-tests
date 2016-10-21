@@ -1,0 +1,104 @@
+@keyframes rainbow {
+	0% {background-color:hsla(0,100%,40%,1)}
+	17% {background-color:hsla(60,100%,40%,1)}
+	33% {background-color:hsla(120,100%,40%,1)}
+	50% {background-color:hsla(180,100%,40%,1)}
+	66% {background-color:hsla(240,100%,40%,1)}
+	83% {background-color:hsla(300,100%,40%,1)}
+	100% {background-color:hsla(360,100%,40%,1)}
+} /* Animation to rotate through spectrum using hsla */
+
+@-webkit-keyframes rainbow {
+	0% {background-color:hsla(0,100%,40%,1)}
+	17% {background-color:hsla(60,100%,40%,1)}
+	33% {background-color:hsla(120,100%,40%,1)}
+	50% {background-color:hsla(180,100%,40%,1)}
+	66% {background-color:hsla(240,100%,40%,1)}
+	83% {background-color:hsla(300,100%,40%,1)}
+	100% {background-color:hsla(360,100%,40%,1)}
+} /* Fallback */
+
+@keyframes bw {
+	0% {background-color:#fff;color:#000;}
+	50% {background-color:#000;color:#fff;}
+} /* Use RGB for flashing colors */
+
+@-webkit-keyframes bw {
+	0% {background-color:#fff;color:#000;}
+	50% {background-color:#000;color:#fff;}
+} /* Fallback */
+
+html {
+	font-size:62.5%; /* Make it so that 1 rem is 10 px*/
+}
+
+body {
+	margin:0pt;
+	font-family:"Comic Sans MS", sans-serif;
+	animation: bw 2s infinite;                        /* NOTE! IMPORTANT! ALERT! REMOVE THIS LINE IF YOU WISH TO DIE LESS PAINFULLY */
+	animation-timing-function:steps(1);
+}
+
+a[href^="mailto"] { /* attribute selector to select email links */
+	color:#000;
+	background-color:#fff;
+	animation: bw 3s infinite;
+}
+
+body > header, footer { /* combinator to select only the body's header */
+	animation: rainbow 5s infinite;
+	color:rgba(255,255,255,0.87); /* Make text slightly transparent */
+	margin:0;
+	padding:1rem;
+	width:auto;
+	text-align:center;
+}
+
+body > header > h1 {
+	font-size:3.6rem;
+} /* Set font size for only main header */
+
+main {
+	margin-top:3rem;
+	margin-bottom:3rem;
+	margin-left:15%;
+	margin-right:15%;
+}
+
+header + p { /* css combinator to select all paragraphs directly following headers */
+	font-family:"Papyrus", serif;
+}
+
+h2 {
+	font-size:2.4rem;
+	border-bottom:.2rem solid #888;
+}
+
+section[id="memes"] > header > h2 { /* attribute selector to select memes section */
+	font-family:"Papyrus",serif;
+}
+
+p, li {
+	font-size:1.8rem;
+	border-bottom:.1rem solid #888;
+}
+p:last-of-type, li:last-of-type { /* Use last of type to make the last element have no bottom border */
+	border-bottom:none;
+}
+
+li:nth-child(2n) {
+	font-family:"Papyrus",serif;
+	text-decoration:underline;
+} /* Use nth-child to select every even li element */
+li:nth-child(2n+1) {
+	font-style:italic;
+	font-weight:bold;
+} /* Use nth-child to select every odd li element */
+
+section:nth-last-child(n+2) { /* every section before 2 from back */
+	font-weight:bold;
+}
+
+footer {
+	font-size:2.4rem;
+}

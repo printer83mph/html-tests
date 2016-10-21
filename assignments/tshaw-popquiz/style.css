@@ -1,0 +1,68 @@
+body {
+  width:800px;
+}
+
+#title {
+  margin:0;
+}
+
+h1 {
+  margin: 0pt;
+  color: #cc0000;
+  font-weight: bold;
+  font-family: "Helvetica","Arial";
+}
+
+h1.title {
+  float: left;
+  font-size: 36pt;
+  padding-bottom: 5pt;
+}
+
+h1.sub {
+  float: right;
+  font-size: 12pt;
+  text-align: right;
+}
+
+
+#content {
+  float: left;
+  width: 500px;
+  margin: 0;
+}
+
+h2 {
+  margin: 0pt;
+  color: #000;
+  font-family: "Helvetica","Arial";
+}
+
+h2.header {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#calendar {
+  float: right;
+  margin: 0pt;
+  width: 300px;
+  font-family: "Helvetica","Arial";
+}
+
+h2.calendar {
+  font-size: 14pt;
+  font-weight: bold;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+#calendar tr {
+  font-style: italic;
+  font-size: 12pt;
+}
+
+#calendar td {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
