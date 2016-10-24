@@ -41,7 +41,8 @@
 			writing-mode:vertical-lr;
 			/* set background to hearts and make text semi-transparent */
 			background-image:url("images/red-queen-background.jpg");
-			opacity:0.5;
+			background-size:400% 100%;
+			color:rgba(255,255,255,0.4);
 		}
 			
 		/*---MAIN SECTION for Body Text---*/	
@@ -56,10 +57,15 @@
 			}
 
 		/*---FIRST LINE OF FIRST PARAGRAPH---*/	
-		
+		p:first-of-type::first-line {
+			font-size:1.5em;
+		}
 		
 		/*---DROP CAP---*/
-		
+		p:first-of-type::first-letter {
+			font-size:3em;
+			float:left;
+		}
 		
 			
 		/*---HIDDEN TEXT BOXES, SHOW ON HOVER BY CHANGING OPACITY---*/		
