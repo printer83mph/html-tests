@@ -6,12 +6,13 @@
 
 	<head>
 		<title>Down the Rabbit Hole | Alice in Wonderland **STARTER CODE**</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!-- I used link for the google web font -->
 	</head>
 
 	<style>
 	
 		/*---IMPORT FONTS from Google using @FONTFACE---*/	
-		
+		/*-- I used link for this --*/
 	
 		/*---CLEAR MARGINS and PADDING---*/	
 		* {
@@ -30,14 +31,18 @@
 		/*---HEADING---*/	
 		h1 {
 			/* Google Font */
+			font-family:"Montserrat";
 			font-size: 3em;
-  			padding: 2%;
-  			margin-right: 2%;
+  		padding: 2%;
+  		margin-right: 2%;
 			float:left;
 			width: 15%;
 			/* text should display vertically */
+			writing-mode:vertical-lr;
 			/* set background to hearts and make text semi-transparent */
-			}
+			background-image:url("images/red-queen-background.jpg");
+			opacity:0.5;
+		}
 			
 		/*---MAIN SECTION for Body Text---*/	
 		main {
@@ -51,7 +56,6 @@
 			}
 
 		/*---FIRST LINE OF FIRST PARAGRAPH---*/	
-		
 		
 		
 		/*---DROP CAP---*/
