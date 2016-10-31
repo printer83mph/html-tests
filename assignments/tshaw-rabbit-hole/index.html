@@ -6,7 +6,7 @@
 
 	<head>
 		<title>Down the Rabbit Hole | Alice in Wonderland **STARTER CODE**</title>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat|Architects+Daughter" rel="stylesheet"> <!-- I used link for the google web font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Architects+Daughter|Roboto+Slab" rel="stylesheet"> <!-- I used link for the google web font -->
 	</head>
 
 	<style>
@@ -26,12 +26,15 @@
 			background: hsla(2, 16%, 92%, 1);
 			color: hsla(2, 99%, 25%, 1);
 			/* Google Font */
+			font-family: "Roboto Slab",serif;
+			font-size-adjust: 0.5285;
 		}
 	
 		/*---HEADING---*/	
 		h1 {
 			/* Google Font */
 			font-family:"Montserrat",sans-serif;
+			font-size-adjust:0.532;
 			font-size: 3em;
 			padding: 2%;
 			margin-right: 2%;
@@ -60,14 +63,20 @@
 		p:first-of-type::first-line {
 			font-size:2em;
 			font-family:"Montserrat",sans-serif;
+			font-size-adjust: 0.5285;
 		}
 		
 		/*---DROP CAP---*/
 		p:first-of-type::first-letter {
-			font-size:7em;
-			font-family:"Montserrat",sans-serif;
+			font-size:5em;
+			/*font-family:"Montserrat",sans-serif;
+			font-size-adjust: 0.5285;*/
 			float:left;
-			margin:1rem;
+			padding:0.1em;
+			line-height:0.7em;
+			background:url("images/red-queen-background.jpg") repeat;
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
 		}
 		
 			
@@ -75,6 +84,7 @@
 		.hidden-text {
 			/* Google Font */
 			font-family:"Architects Daughter",cursive;
+			font-size-adjust: 0.4285;
 			font-size: 1.4em;			
 			padding: 0.1em 0.4em;
 			background-color: hsla(28, 55%, 55%, 0.5);
@@ -91,6 +101,7 @@
 		blockquote {
 			/* Google Font */
 			font-family:"Montserrat",sans-serif;
+			font-size-adjust: 0.5285;
 			font-size: 3em;
 			width: 25%;
 			float: right;
@@ -103,14 +114,19 @@
 			background-position: left bottom; /* positions the background image */
 			padding-bottom: 5em;
 			/* set the quote style */
-			quotes: "\201C""\201D""\2018""\2019";
+			quotes: "\201C" "\201D" "\2018" "\2019";
 			/* set a drop shadow on text */
-			text-shadow:0 0.1em 0.2em #555;
+			text-shadow:0 0.07em 0.2em #555;
 		}
 		
 		/* use pseudo elements BEFORE and AFTER 
 		to inject quotation marks before and after the block quote */		
-		
+		blockquote:before {
+			content: open-quote;
+		}
+		blockquote:after {
+			content: close-quote;
+		}
 	
 	</style>
 	
