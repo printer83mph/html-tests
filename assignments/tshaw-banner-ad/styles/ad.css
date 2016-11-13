@@ -1,0 +1,21 @@
+* {
+  margin:0;
+}
+
+.container {
+  font-family: "Oswald", sans-serif;
+  background-color: black;
+  color: white;
+  padding:10px;
+  width: 120px;
+  height: 560px;
+  border: 10px solid black;
+  border-image: url("../media/666.png") 10 round;
+}
+
+h1 {
+  font-size:40px;
+  background-image: linear-gradient(red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
