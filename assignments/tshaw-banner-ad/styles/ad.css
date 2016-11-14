@@ -43,13 +43,29 @@ p.by {
 }
 
 .hell-img {
-  box-shadow: 0 0 10px red;
   position:absolute;
   width: 140px;
   height:100px;
   top:360px;
   left:10px;
   background-size: cover;
-  background-image: radial-gradient(closest-side,rgba(0,0,0,0),rgba(0,0,0,0.5)),
+  background-image: radial-gradient(closest-side,rgba(0,0,0,0),rgba(0,0,0,0.7)),
   url("../media/hell.jpg");
+}
+
+.call {
+  position: absolute;
+  top: 495px;
+  padding:5px;
+  text-align:center;
+  left:27px;
+  transition-duration: 0.1s;
+}
+
+.call:hover {
+  box-shadow: 0 0 10px yellow,
+  0 0 15px orange,
+  0 0 20px red;
+  background-color: yellow;
+  color: #000;
 }
