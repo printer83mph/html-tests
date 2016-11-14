@@ -38,6 +38,10 @@ blockquote {
   top:210px;
 }
 
+h2 {
+  font-style: italic;
+}
+
 p.by {
   margin-top: 5px;
 }
