@@ -11,6 +11,7 @@
   height: 560px;
   border: 10px solid black;
   border-image: url("../media/666.png") 10 round;
+  /*border-image: url("../media/667.png") 100 round;*/ /*Uncomment to use alternate border*/
 }
 
 h1 {
