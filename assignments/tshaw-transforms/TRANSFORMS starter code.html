@@ -63,12 +63,12 @@
 	}
 
 	@keyframes wow {
-		from {transform: scale(1);}
-		to {transform: scale(2);}
+		from {transform: scale(1) rotate(-10deg);}
+		to {transform: scale(2) rotate(10deg);}
 	}
 
 	article div:nth-child(5):hover {
-		animation: wow 0.25s ease-in-out alternate infinite;
+		animation: wow 0.25s linear alternate infinite;
 	}
 
 </style>
