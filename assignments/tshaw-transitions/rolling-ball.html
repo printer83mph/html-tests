@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> da rolling ball </title>
+  <style>
+    body > div {
+      height: 600px;
+      width: 600px;
+      background-color: #aaa;
+    }
+    #ball {
+      left: 25px;
+      top: 25px;
+      border-radius: 50%;
+      background-color: blue;
+      width: 50px;
+      height: 50px;
+      transition: left 0.5s ease-in, top 0.5s ease-in-out;
+      position: absolute;
+    }
+    div:hover > #ball {
+      left: 500px;
+      top: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="ball"> </div>
+  </div>
+</body>
+</html>
