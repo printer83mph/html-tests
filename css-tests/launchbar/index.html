@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type="radio"] {
+      display:none;
+    }
+    label {
+      display:block;
+      background-color: black;
+      color:white;
+    }
+    div {
+      height:0;
+      display: none;
+    }
+    input[type="radio"]:checked + div {
+      height:auto;
+      display: block;
+    }
+    form {
+      border: 1px solid black;
+      width:300px;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <label for="1">thing 1</label>
+  <input type="radio" id="1" name="things"></input>
+  <div> stuff 1 </div>
+  <label for="2">thing 2</label>
+  <input type="radio" id="2" name="things"></input>
+  <div> stuff 2 </div>
+  <label for="3">thing 3</label>
+  <input type="radio" id="3" name="things"></input>
+  <div> stuff 3 </div>
+</form>
+</body>
+</html>
