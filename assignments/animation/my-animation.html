@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	@keyframes flash {
+		from {background-color:red;}
+		33% {background-color:blue;}
+		66% {background-color:yellow;}
+		to {background-color:red;}
+	}
+	@keyframes backforth {
+		from {left:20pt;}
+		to {left:-20pt}
+	}
+	body {
+		animation: flash 3s infinite;
+	}
+	header {
+		text-align:center;
+		border-bottom:2px black solid;
+		overflow:hide;
+	}
+	header h1 {
+		position:relative;
+		animation: backforth 0.5s infinite linear alternate;
+	}
+	header a {
+		padding:10pt;
+		margin:10pt;
+		animation: flash 2s infinite;
+		text-decoration: none;
+		color: white;
+	}
+	div { display:none; }
+	div:target { display:block; }
+</style>
+<body>
+	<header>
+		<h1> HEY SAVE ME </h1>
+		<a href="#main"> ahhh </a>
+		<a href="#about"> about </a>
+		<a href="#contact"> contact </a>
+	</header>
+	<div id="main">
+		<h2> AHHHHHH </h2>
+		<p> pls help me </p>
+	</div>
+	<div id="about">
+		<h2> about </h2>
+		<p> you probably can't read this but if you can im not doing that well pls see if you can get satan to let me out of hell thx </p>
+	</div>
+	<div id="contact">
+		<h2> contact </h2>
+		<p> sorry you can't contact me im in hell currently. kinda sticky situation </p>
+	</div>
+</body>
+</html>

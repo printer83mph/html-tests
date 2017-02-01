@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" name="convert"></textarea>
+  <button name="convert" id="converter"> rightify </button>
+  <div id="output"></div>
+  <script>
+
+      var input = document.getElementsByTagName("input")[0];
+      var but = document.getElementById("converter");
+      var output = document.getElementsByTagName("div")[0];
+
+      but.addEventListener("click",wow);
+
+      function wow() {
+        output.innerHTML = input.value + " Right?";
+      }
+
+  </script>
+</body>
+</html>

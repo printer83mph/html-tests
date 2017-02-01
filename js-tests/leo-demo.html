@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="refresh">refresh</button>
+  <script>
+    var refreshButton = document.getElementById("refresh");
+    refreshButton.addEventListener("click",refresh);
+    function Animal() {
+      this.hp = 10;
+      this.group = Math.floor(Math.random()*3);
+      this.getHp = function() {
+        if(this.hp < 0) {
+          return(0);
+        } else {
+          return(this.hp);
+        }
+      }
+    }
+    var animals = [];
+    for(var i = 0; i < 10; i++) {
+      var dave = document.createElement("div");
+      document.body.appendChild(dave);
+      animals.push(new Animal());
+      document.getElementsByTagName("div")[i].innerHTML = animals[i].getHp() + " | " + String(animals[i].group);
+    }
+    function refresh() {
+      for(var i = 0; i < 10; i++) {
+        var curElement = document.getElementsByTagName("div")[i];
+        animals[i].hp --;
+        curElement.innerHTML = String(animals[i].getHp()) + " | " + String(animals[i].group);
+      }
+    }
+  </script>
+</body>
+</html>

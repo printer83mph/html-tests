@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+	<title>CSS3 Animation Starter Code</title>
+	
+	<!-- PREFIX-FREE SHIV from Kirupa.com inserted here -->
+	<script src="http://www.kirupa.com/js/prefixfree.min.js"></script>
+	
+	<style>
+	
+		.circle {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+		}
+		
+		/* add animation keyframes definition here */
+		@keyframes circlemove {
+			from {transform:translate(0,0)}
+			25% {transform:translate(100,20)}
+			50% {transform:translate(100,100)}
+			75% {transform:translate(20,100)}
+			to {transform:translate(0,0)}
+		}
+
+		#circle1 {
+			background-color: blue;
+			animation: circlemove 3s steps(8) infinite; 
+		}
+		
+			
+	</style>
+
+</head>
+
+<body>
+
+	<div id="circle1" class="circle"></div>
+
+
+
+
+</body>
+
+</html>
