@@ -3,33 +3,46 @@
 <head>
 
 	<title>CSS3 Animation Starter Code</title>
-	
-	<!-- PREFIX-FREE SHIV from Kirupa.com inserted here -->
-	<script src="http://www.kirupa.com/js/prefixfree.min.js"></script>
-	
+	<link rel="stylesheet" type="text/css" href="animate.css" />
+
 	<style>
-	
+
 		.circle {
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
 		}
-		
-		/* add animation keyframes definition here */
-		@keyframes circlemove {
-			from {transform:translate(0,0)}
-			25% {transform:translate(100,20)}
-			50% {transform:translate(100,100)}
-			75% {transform:translate(20,100)}
-			to {transform:translate(0,0)}
+
+		@keyframes plswork {
+			from {transform:translate(0px,0px);}
+			25% {transform:translate(200px,0px);}
+			50% {transform:translate(200px,200px);}
+			75% {transform:translate(0px,200px);}
+			to {transform:translate(0px,0px);}
+		}
+
+		@keyframes colors {
+			from {background-color: yellow;}
+			50% {background-color: blue;}
+			to {background-color: red;}
 		}
 
 		#circle1 {
 			background-color: blue;
-			animation: circlemove 3s steps(8) infinite; 
+			animation: plswork 4s 1s steps(8) infinite;
 		}
-		
-			
+
+		#circle2 {
+			animation: colors 4s cubic-bezier(0.9,0,0,0.9) infinite;
+		}
+
+		#circle3 {
+			background-color: #0f0f0f;
+			position: fixed;
+			right:20pt;
+			top:20pt;
+		}
+
 	</style>
 
 </head>
@@ -38,8 +51,9 @@
 
 	<div id="circle1" class="circle"></div>
 
+	<div id="circle2" class="circle"></div>
 
-
+	<div id="circle3" class="circle animated infinite pulse"></div>
 
 </body>
 
