@@ -10,6 +10,7 @@ body {
   -moz-column-gap: 40pt;
   column-gap: 40pt;
   font-size: 2em;
+  font-family: "Helvetica Neue", sans-serif;
 }
 img {
   width: 100%;
@@ -18,4 +19,11 @@ h1 {
   -webkit-column-span: all;
   column-span: all;
   text-align: center;
+}
+p:first-of-type:first-letter {
+  font-size: 5em;
+  float:left;
+}
+figcaption {
+  font-style: italic;
 }
