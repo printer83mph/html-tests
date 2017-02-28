@@ -17,6 +17,8 @@ ul {
 /* FLEXBOX CONTAINER */
 #container {
     margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
 
     /* flexbox parent properties include:
         display: flex;
@@ -53,34 +55,43 @@ header, section, aside, footer {
 
 header {
     /* ... add code here for flexbox item */
+    width: 100%;
 }
 
 section {
     min-height: 400px;
+    flex-grow: 5;
     /* ... add code here for flexbox item */
 }
 
 aside {
     /* ... add code here for flexbox item */
+    flex-grow: 1;
 }
 
 /* FOOTER */
 footer {
     /* ... add code here for flexbox item */
-
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     /* NOTE: the footer will also become a flexbox so that you can apply flexbox settings to its children */
 }
 
 footer nav {
     margin: 10px 0;
+    flex: 1;
+    order: -1;
 }
 
 footer p {
     margin: 10px 0;
+    flex: 4;
 }
 
 footer .social {
     margin: 10px 0;
+    flex: 2;
 }
 
 footer img {
