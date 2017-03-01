@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+
+/* RESET STYLES */
+body, ul, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+/* FLEXBOX CONTAINER */
+#container {
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* flexbox parent properties include:
+        display: flex;
+        flex-direction (defaults to "row")
+        flex-wrap
+        flex-flow (shorthand for flex-direction and flex-wrap)
+        justify-content (defines how extra space is distributed along main axis)
+        align-items (defines alignment along cross axis on the current line)
+        align-content (defines how extra space in the cross-axis is distributed)
+    */
+
+    /* ... add code here for flexbox container */
+
+}
+
+header, section, aside, footer {
+    background: lightgray;
+    min-height: 100px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* FLEXBOX ITEMS */
+    /* these are the "flex items" that are contained within the flexbox */
+    /* flexbox child properties include:
+        order
+        flex-grow
+        flex-shrink
+        flex basis
+        flex (shorthand for the above 3 properties - RECOMMENDED)
+        align-self
+    */
+
+header {
+    /* ... add code here for flexbox item */
+    width: 100%;
+}
+
+section {
+    min-height: 400px;
+    flex-grow: 5;
+    /* ... add code here for flexbox item */
+}
+
+aside {
+    /* ... add code here for flexbox item */
+    flex-grow: 1;
+}
+
+/* FOOTER */
+footer {
+    /* ... add code here for flexbox item */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* NOTE: the footer will also become a flexbox so that you can apply flexbox settings to its children */
+}
+
+footer nav {
+    margin: 10px 0;
+    flex: 1;
+    order: -1;
+}
+
+footer p {
+    margin: 10px 0;
+    flex: 4;
+}
+
+footer .social {
+    margin: 10px 0;
+    flex: 2;
+}
+
+footer img {
+    width: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+    <header>HEADER</header>
+
+    <section>MAIN CONTENT (section)</section>
+
+    <aside>SIDEBAR CONTENT (aside)</aside>
+
+    <footer>
+
+        <p>Copyright 2016. All Rights Reserved. This is the standard legal mumbo jumbo that you will find on every website. Blah blah.</p>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Pricing</li>
+                <li>Plan Options</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+
+        <div class="social">
+            <h4>Find us on social media</h4>
+            <img src="images/facebook-icon.png">
+            <img src="images/twitter-icon.png">
+            <img src="images/instagram-icon.jpeg">
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
