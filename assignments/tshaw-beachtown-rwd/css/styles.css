@@ -1,0 +1,252 @@
+/* ---- RESET ---- */
+/* removes the browser default spacing */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ---- BASE STYLES ---- */
+
+body {
+    font: 80% Helvetica, Arial, sans-serif;
+    color: #5B6273;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #989A23;
+}
+
+p {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+img {
+    max-width: 100%; /*keeps images from spilling out of their containers */
+}
+
+/* ---- CONTAINER DIV ---- */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* centers content on page */
+    display: flex;
+    flex-direction: column; /* items flow vertically */
+}
+
+/* make immediate children of container FLEXBOXES */
+header, section, footer {
+    display: flex;
+}
+
+
+/* ---- HEADER ---- */
+
+header {
+    align-items: center; /* vertical alignment of header elements */
+    justify-content: space-between; /* horizontal alignment within header */
+    margin: 10px 0; /* shorthand for TB and RL */
+    position: relative;
+    top: -20px;
+}
+
+#logo {
+    position: relative;
+    right: 20px;
+    z-index: 10; /* moves it in front of the RUNNER */
+}
+
+nav ul {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+nav li {
+    padding-right: 3em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #989A23;
+}
+
+/* ---- RUNNER SECTION ---- */
+
+.runner {
+    background: url(../images/runner-background.jpg) right no-repeat; /* RIGHT ensures that the image aligns with the right side when browser window is resized */
+    background-size: cover; /* the image automatically resizes and clips as necessary to fill the space of its container */
+    height: 230px;
+    position: relative;
+    top: -60px; /* moves it up over the logo */
+}
+
+.runner div {
+    background: rgba(250, 250, 250, .8); /* semi-transparent box */
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.3em;
+    position: relative;
+}
+
+.runner div a {
+    background: #989A23;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.runner a:hover {
+    opacity: 0.8;
+}
+
+
+/* ---- BUCKETS SECTION ---- */
+
+.buckets {
+    position: relative;
+    top: -40px;
+}
+
+.buckets div {
+    width: 33%;
+}
+
+.buckets div:nth-of-type(2) {
+    margin: 0 1em; /* left & right margin on 2nd bucket only */
+}
+
+.buckets a {
+    color: #989A23;
+}
+
+.buckets a:hover {
+    text-decoration: underline;
+}
+
+/* ---- MAIN SECTION ---- */
+
+.main {
+    position: relative;
+    top: -10px;
+    margin-bottom: 5px;
+}
+
+.main article {
+    margin: 0 20px;
+    flex: 3; /* takes up 3 (of 6 total) of the available width */
+}
+
+.main p {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.sidebar-right {
+    flex: 2; /* takes up 2 (of 6 total) of the available width */
+}
+
+.sidebar-right article {
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.sidebar-right div { /* placeholder for reviews */
+    height: 50px;
+    background: rgba(152, 154, 35, .4);
+    margin: 5px 0;
+}
+
+.sidebar-left {
+    flex: 1;    /* takes up 1 (of 6 total) of the available width */
+    order: -1;  /* moves this content to the left side; rather than following the order in the HTML */
+                /* for accessibility purposes, it's best to have the main content appear first in the HTML, before sidebar content */
+}
+
+.sidebar-left img {
+    margin-bottom: 10px;
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100px;
+    background: rgba(152, 154, 35, .4);
+    margin-bottom: 15px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+footer img {
+    margin-right: 10px;
+}
+
+@media screen and (min-width:800px) {
+
+}
