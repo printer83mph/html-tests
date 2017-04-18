@@ -9,6 +9,13 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
+	<script>
+	function toggleNav() {
+		let x = document.getElementById("main-nav")
+		x.classList.toggle("hidden-nav")
+	}
+	</script>
+
 </head>
 
 <body>
@@ -17,7 +24,9 @@
 
 		<header>
 
-			<nav>
+			<button onclick="toggleNav()" class="menu-button"> Menu </button>
+
+			<nav id="main-nav" class="hidden-nav">
 				<ul>
 					<li><a href="">Home</a></li>
 					<li><a href="">Pricing</a></li>
