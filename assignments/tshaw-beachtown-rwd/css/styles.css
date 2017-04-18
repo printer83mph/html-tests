@@ -85,7 +85,7 @@ img {
 /* ---- CONTAINER DIV ---- */
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   /* centers content on page */
@@ -123,23 +123,19 @@ header {
   display: none;
 }
 
-nav {
-  width: 100%;
-}
-
 nav ul {
   display: flex;
-  flex-direction: column;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-nav li:nth-of-type(n+2) {
-  border-top: 1px solid lightgray;
-  margin-top: 3px;
-  padding-top: 3px;
-}
 
 nav li {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
 }
 
 nav a:hover {
@@ -156,7 +152,7 @@ nav a:hover {
   color: white;
   border: none;
   padding: 5px;
-  border-radius: 5px;
+  width: 100%;
 }
 
 .menu-button:hover {
@@ -218,6 +214,11 @@ nav a:hover {
 
 .buckets a:hover {
   text-decoration: underline;
+}
+
+.buckets h2, .buckets p {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 
@@ -334,6 +335,9 @@ footer img {
     border-top: none;
     margin-top: 0;
     padding-top: 0;
+  }
+  .container {
+    width: 90%;
   }
 }
 
